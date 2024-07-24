@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3"
 
 services:
     # image project
@@ -20,7 +20,7 @@ services:
         image: nginx:alpine
         restart: unless-stopped
         ports:
-            - "8000:80"
+            - "8010:80"
         volumes:
             - ./:/var/www
             - ./docker/nginx/:/etc/nginx/conf.d/

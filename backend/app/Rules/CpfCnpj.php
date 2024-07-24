@@ -17,18 +17,18 @@ class CpfCnpj implements ValidationRule
     {
         $value = self::extractNumber($value);
         if ($value=="") {
-            $fail = ('O :attribute precisa ser valido.');
+            $fail('O :attribute precisa ser valido.');
             return;
         }
         if(!$this->isCpfOrCnpj($value)){
-            $fail = ('O :attribute precisa ser valido.');
+            $fail('O :attribute precisa ser valido.');
             return;
         }
         if (strlen($value) === 11) {
             return;
         }
         if ($this->cnpjExist($value)) {
-            $fail = ('O :attribute precisa está ativo.');
+            $fail('O :attribute precisa está ativo.');
         }
     }
 
