@@ -21,6 +21,7 @@ class FornecedorEloquentORM implements FornecedorRepositoryInterface
                     $query->Where('cpf_cnpj', 'like', "%{$filter}%");
                 }
             })
+            ->get()
             ->toArray();
     }
 
