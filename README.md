@@ -3,6 +3,21 @@
 
 Teste para dev Full Stack na empresa StartGov
 
+## Frontend
+
+Acesse a pasta do Frontend
+```bash
+cd Frontend/
+```
+
+Instalar os modulos
+```bash
+npm install
+```
+Iniciar a aplicação
+```bash
+npm run dev 
+```
 
 ## Backend
 

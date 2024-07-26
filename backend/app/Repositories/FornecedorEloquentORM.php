@@ -21,7 +21,7 @@ class FornecedorEloquentORM implements FornecedorRepositoryInterface
                     $query->Where('cpf_cnpj', 'like', "%{$filter}%");
                 }
             })
-            ->get()
+            ->paginate()
             ->toArray();
     }
 
@@ -42,6 +42,7 @@ class FornecedorEloquentORM implements FornecedorRepositoryInterface
             return null;
         }
         $fornecedor->delete();
+        return null;
         return $fornecedor;
     }
 
